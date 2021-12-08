@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Livewire\CategoriaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/categorias/lista', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/categorias/novo', [CategoryController::class, 'create'])->name('category.create');
+
+Route::get('/categorias', CategoriaController::class);
